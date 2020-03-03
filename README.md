@@ -5,6 +5,7 @@ The display shows the time, date, alarm time and sleep countdown on the 16x2 LCD
 The sketch is used to control an Arduino Uno or Nano which in this case was built into a 1970s alarm clock radio.  
 The sketch programs an output pin which outputs 5v or 0v in order to turn a radio on or off according to the the alarm state.
 The radio itself can be switched to activate radio or alarm tone, but the electronics and switching for this is part of the original radio unit, not part of the sketch.
+
 The following are the buttons and switches which control the display. All buttons and switches set 
 respective Arduino input pins to 0v (low state):
 1. "time" - Latching pushbutton. Activates the time set mode

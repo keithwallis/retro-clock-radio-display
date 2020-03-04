@@ -8,8 +8,10 @@ The Arduino runs an autonomous clock which is periodically updated with an inter
 
 Main Components (all built into a 1970s clock radio):
 
- a. Arduino Nano,
- b. RTC real-time clock module and button cell battery,
+ a. Arduino Nano
+ 
+ b. RTC real-time clock module and button cell battery
+ 
  c. 5v power supply - a charger from a mobile phone was used.
 
 Operation:

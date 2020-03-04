@@ -21,6 +21,12 @@ The sketch programs an output pin which outputs 5v or 0v in order to turn a radi
 The radio itself can be switched to activate radio or alarm tone, but the electronics and switching for this is part of the original radio unit, not part of the sketch.
 Because the radio has no buttons for controlling the date display (original clock did not have this), button combinations are needed to set the date.
 
+Software (sketch) operation:
+
+The main part of the sketch is a loop. Within this loop is a clock counter which runs in 1000ms intervals (i.e. it 'ticks' every second). 
+Every minute the time display is updated with the time from the RTC module to keep the clock accurate.
+The rest of the loop updates the display and checks the button presses using "if" functions to activate code e.g. to activate a function or scroll the display. No interrupts are used.
+
 Control Buttons:
 
 The following are the buttons and switches which control the display. All buttons and switches set 

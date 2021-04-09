@@ -13,6 +13,8 @@ Main Components (all built into a 1970s clock radio):
  b. RTC real-time clock module and button cell battery
  
  c. 5v power supply - a charger from a mobile phone was used.
+ 
+ d. 16x2 LCD Display
 
 Operation:
 

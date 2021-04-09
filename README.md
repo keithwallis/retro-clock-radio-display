@@ -1,4 +1,4 @@
-# retro-clock-radio-display
+# retro-rtc-alarm-clock
 
 ![image](https://user-images.githubusercontent.com/42916559/114238083-54a89800-9984-11eb-942f-cc3b6eb8380a.png)
 

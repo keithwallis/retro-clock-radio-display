@@ -1,12 +1,14 @@
 # retro-rtc-alarm-clock
 
 ![image](https://user-images.githubusercontent.com/42916559/114238083-54a89800-9984-11eb-942f-cc3b6eb8380a.png)
+Image: An Arduino-driven LCD display built into a 1970s alarm clock radio
 
 Overview:
 
 This design enables a modern 16x2 LCD display and Arduino-driven clock to replace the clock and driver circuits of a traditional LED clock radio.
-The design involves an Arduino being used in place of the clock logic chip, driver and display circuits.
-The radio circuitry and the physical control buttons for the clock are retained. Externally, other than the display, the clock is unchanged.
+The original radio used a neon 7-segment display which had reached the end of its lifetime.
+The design involves an Arduino being used in place of the clock logic chip, driver and display circuits of the original device.
+The radio circuitry and the physical control buttons for the clock are retained. Externally, other than the display, the device is unchanged.
 The Arduino runs an autonomous clock which is periodically updated with an internal RTC time feed via I2C.
 
 Main Components (all built into a 1970s clock radio):

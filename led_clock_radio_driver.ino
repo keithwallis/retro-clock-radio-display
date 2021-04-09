@@ -50,14 +50,12 @@
 
 // Create display and DS1307 objects.  These are global variables that
 // can be accessed from both the setup and loop function below.
-/*Adafruit_7segment clockDisplay = Adafruit_7segment();*/
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 RTC_DS1307 rtc = RTC_DS1307();
 
 //Create instances of the elapsed millisecond object for tracking absolute time in ms. 
 elapsedMillis timeElapsed; // For the clock loop
 elapsedMillis AlarmTimerMillis; // For the alarm timeout - not used
-
 
 
 // Keep track of the hours, minutes, seconds displayed by the clock.
@@ -76,8 +74,7 @@ int alm_hrs = 0; /* Initialise alarm hours default */
 int alm_mins = 0; /* Initialise alarm mins default */
 
 
-
-const int sleep_timer_max = 60; /* Set sleep timer minutes default countdown start */
+const int sleep_timer_max = 60; /* Set sleep timer minutes default countdown start*/
 const int alarm_timer_limit = 600; /* Duration of alarm/signal in sec. Must be > 60 to ensure the alarm works beyond hr/min parity of time trigger.*/
 int sleep_timer = sleep_timer_max; /* Initialise sleep timer to default maximum */
 int alarm_timer = alarm_timer_limit; /* Initialise alarm countdown to default maximum */
@@ -105,7 +102,7 @@ bool blinkColon = false;
 // Default setting of signal-active flag.
 bool AlmCountdownRunning = false;
 
-// Create a bit matrix for custom characters formed from the 5x8 array
+// Create a bit matrix for the bell, moon and battery symbols - custom characters formed from the 5x8 array
 byte bell[8] = {
   B00000,
   B00100,
@@ -197,8 +194,9 @@ void setup() {
 
   // Setup the DS1307 real-time clock and start it.
   rtc.begin();
-  // This line sets the DS1307 time to the given date and time
-//rtc.adjust(DateTime(2019, 2, 27, 23, 49, 12));
+  
+  // Following line sets the DS1307 time to the given date and time. Comment out if not needed.
+  //rtc.adjust(DateTime(2019, 2, 27, 23, 49, 12));
   // Set the DS1307 clock if not set before, i.e. is not running.
   bool ClockStopped = !rtc.isrunning();//<----"isrunning" seems unreliable; returns true, even if rtc battery was removed.
   // Alternatively you can force the clock to be set again by

@@ -1,4 +1,7 @@
 # retro-clock-radio-display
+
+![image](https://user-images.githubusercontent.com/42916559/114238083-54a89800-9984-11eb-942f-cc3b6eb8380a.png)
+
 Overview:
 
 This design enables a modern 16x2 LCD display and Arduino-driven clock to replace the clock and driver circuits of a traditional LED clock radio.
